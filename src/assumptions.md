@@ -1,10 +1,19 @@
-1. Although there exists entries that are future dated (as of Jan 24th, 2026), I will assume that all entries are valid and should be included in the analysis.
+## Data Quality
 
-2. The expected reorder interval is assumed to be 30 days.
+- Although there exist entries that are future-dated (as of Jan 24th, 2026), I assume that all entries are valid and should be included in the analysis. This could represent pre-scheduled orders.
 
-3. It is assumed that the data provided is complete and there are no missing entries.
+- The dataset is assumed to be complete with no missing transactions. All successful and failed orders are captured in the data.
 
-4. It is assumed that the weight loss pen sale was first introduced on Jan 1st, 2025, and any sales prior to this date are not related nor included in the analysis.
+## Business 
 
-5. In the analysis, 'retention' is defined as the percentage of users who return to use the service at least once within a 30-day period.
-Limitation:
+- The weight loss injectable pen was first introduced on January 1st, 2025. Any sales prior to this date are not related to this product line and are excluded from the analysis.
+
+- Based on the median inter-order interval of ~30 days observed in the data, I assume the medication supply lasts approximately 30 days, and thus customers are expected to reorder around this interval.
+
+- A customer is considered "churned" if they have not placed an order in the last 45 days (30 days expected reorder interval + 15 days grace period) as of the analysis date.
+
+- A customer is "retained" if they place at least one additional order within 44 days of their initial order. This definition may limit the ability to capture returning customers who reorder after a longer interval, yet is chosen as the range of given data only a year.
+
+## Analysis
+
+- The analysis does not account for external factors such as marketing campaigns, seasonality, or competitor actions that may influence customer behaviour.

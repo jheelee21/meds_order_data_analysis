@@ -12,7 +12,7 @@
 
 - A customer is considered "churned" if they have not placed an order in the last 45 days (30 days expected reorder interval + 15 days grace period) as of the analysis date.
 
-- A customer is "retained" if they place at least one additional order within 44 days of their initial order. This definition may limit the ability to capture returning customers who reorder after a longer interval, yet is chosen as the range of given data only a year.
+- A customer is "retained" if they place at least one additional order within 45 days of their initial order. This definition may limit the ability to capture returning customers who reorder after a longer interval, yet it is chosen as the date range of the data collection is only an year.
 
 ## Analysis
 
